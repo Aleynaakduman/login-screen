@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <title>Log In</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="baslik">
+            <h1>Log In</h1>
+        </div>
+
+        <form method="POST" action="">
+            {% csrf_token %}
+
+            <div class="input">
+                <input type="text" placeholder="username"> <br>
+                <input type="text" placeholder="password">
+                <br>
+                <label for="">
+                    <input type="checkbox">remember me
+                </label>
+
+            </div>
+            <div class="btns">
+                <button class="btn">Log In</button>
+                <button class="btn">Sign Up</button>
+            </div>
+        </form>
+
+
+
+
+
+        <div class="sosyal">
+            <p>Other log in methods</p>
+            <div class="icon">
+                <i class="fa-brands fa-google "></i>
+                <i class="fa-brands fa-github"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+</body>
+
+</html>
