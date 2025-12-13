@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+</head>
+
+<body>
+
+
+
+    <div class="container">
+
+        <div class="baslik">
+            <h1>Log In</h1>
+        </div>
+
+        <div class="input">
+            <input type="text" id="username" placeholder="username"> <br>
+            <input type="text" id="password" placeholder="password">
+            <br>
+            <label class="check" for="">
+                <input  type="checkbox"><p>remember me</p>
+            </label>
+
+        </div>
+        <div class="btns">
+  <button class="btn" onclick="login()" >Log In</button>
+          <button id="signup" class="btn" >Sign Up</button>
+        </div>
+        
+
+
+
+
+        <div class="sosyal">
+            <p>Other log in methods</p>
+            <div class="icon">
+                <i class="fa-brands fa-google "></i>
+                <i class="fa-brands fa-github"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+
+        </div>
+
+
+          
+              
+            
+            
+       
+
+        
+
+
+    </div>
+
+<script>
+    function login() {
+        const user = document.getElementById("username").value;
+        const pass = document.getElementById("password").value;
+
+        if (user === "" || pass === "") {
+            alert("Lütfen kullanıcı adı ve şifre girin");
+        } else {
+            window.location.href = "welcome.html?username=" + encodeURIComponent(user);
+        }
+    }
+
+
+    const signup = document.getElementById("signup");
+    signup.addEventListener("click", function(){
+        window.location.href = "signup.html";
+    })
+    
+</script>
+
+    
+</body>
+
+</html>
